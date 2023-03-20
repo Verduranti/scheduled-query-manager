@@ -1,0 +1,23 @@
+{
+  "name": "projects/{projectId}/locations/{region}/transferConfigs/{configId}",
+  "displayName": "DisplayName",
+  "dataSourceId": "scheduled_query",
+  "params": {
+    "destination_table_name_template": "my_table",
+    "write_disposition": "WRITE_APPEND",
+    "query": "SELECT name FROM tabl WHERE x = 'y'"
+  },
+  "schedule": "first sunday of quarter 00:00",
+  "scheduleOptions": {
+    "disable_auto_scheduling": false,
+    "start_time":"",
+    "end_time": ""
+  },
+  "dataRefreshWindowDays": "only used on some features",
+  "disabled": true,
+  "notificationPubsubTopic": "pubsub topic string here",
+  "emailPreferences": {
+    "enable_failure_email": false
+  },
+  "destinationDatasetId": "dataset name goes here"
+}

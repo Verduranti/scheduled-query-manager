@@ -1,0 +1,24 @@
+{
+  "name": string,
+  "displayName": string,
+  "dataSourceId": string,
+  "params": {
+    object
+  },
+  "schedule": string,
+  "scheduleOptions": {
+    object (ScheduleOptions)
+  },
+  "dataRefreshWindowDays": integer,
+  "disabled": boolean,
+  "updateTime": string,
+  "nextRunTime": string,
+  "state": enum (TransferState),
+  "userId": string,
+  "datasetRegion": string,
+  "notificationPubsubTopic": string,
+  "emailPreferences": {
+    object (EmailPreferences)
+  },
+  "destinationDatasetId": string
+}

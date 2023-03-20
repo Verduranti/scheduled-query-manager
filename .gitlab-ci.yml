@@ -1,0 +1,16 @@
+image: google/cloud-sdk:alpine
+
+stages:
+  - deploy
+
+#queries don't exist in stage at this point
+deploy-data-pipelines-queries-prod:
+  stage: deploy
+  image: node:alpine
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      changes:
+        - scheduled-queries/**/* # folder including all files and subfolders
+  script:
+    - npm install
+    - node ./scheduled-queries/deployScheduledQueries.js $PROD_SERVICE_ACCOUNT
